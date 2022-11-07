@@ -22,42 +22,52 @@ namespace BallParkApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Customer> customers = new List<Customer>();
-            OleDbConnection oleDbConnection = new OleDbConnection();
-            oleDbConnection.ConnectionString = ConfigurationManager.AppSettings["BallPark"];
-
-
-            var command = "Select * from Customer";
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
-            OleDbCommand command2 = new OleDbCommand(command, oleDbConnection);
-            adapter.SelectCommand = command2;
-            var ds = new DataSet();
-            adapter.Fill(ds);
-            var dt = ds.Tables[0];
-            foreach (DataRow dr in dt.Rows)
+            if (textBox1.Text == "Admin" && maskedTextBox1.Text == "Admin")
             {
-
-                var tempUser = new Customer
-                {
-                    Id = Convert.ToInt32(dr["Customer_Id"]),
-                    Username = dr["Username"].ToString(),
-                    Password = dr["Password"].ToString()
-                };
-                if (tempUser != null)
-                {
-                    customers.Add(tempUser);
-                }
+                MessageBox.Show("Welcome Admin!!");
+                AdminPage page = new AdminPage();
+                page.Show();
+                this.Close();
             }
-
-            foreach(var cust in customers)
+            else
             {
-                if(textBox1.Text == cust.Username && maskedTextBox1.Text == cust.Password)
+                List<Customer> customers = new List<Customer>();
+                OleDbConnection oleDbConnection = new OleDbConnection();
+                oleDbConnection.ConnectionString = ConfigurationManager.AppSettings["BallPark"];
+
+
+                var command = "Select * from Customer";
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                OleDbCommand command2 = new OleDbCommand(command, oleDbConnection);
+                adapter.SelectCommand = command2;
+                var ds = new DataSet();
+                adapter.Fill(ds);
+                var dt = ds.Tables[0];
+                foreach (DataRow dr in dt.Rows)
                 {
-                    MessageBox.Show("Welcome " + cust.Username + "!!!");
-                    Utility.Utility.Customer = cust;
-                    BookingPage page = new BookingPage();
-                    page.Show();
-                    this.Close();
+
+                    var tempUser = new Customer
+                    {
+                        Id = Convert.ToInt32(dr["Customer_Id"]),
+                        Username = dr["Username"].ToString(),
+                        Password = dr["Password"].ToString()
+                    };
+                    if (tempUser != null)
+                    {
+                        customers.Add(tempUser);
+                    }
+                }
+
+                foreach (var cust in customers)
+                {
+                    if (textBox1.Text == cust.Username && maskedTextBox1.Text == cust.Password)
+                    {
+                        MessageBox.Show("Welcome " + cust.Username + "!!!");
+                        Utility.Utility.Customer = cust;
+                        BookingPage page = new BookingPage();
+                        page.Show();
+                        this.Close();
+                    }
                 }
             }
         }
