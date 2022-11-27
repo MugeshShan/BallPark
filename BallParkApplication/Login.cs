@@ -50,7 +50,8 @@ namespace BallParkApplication
                     {
                         Id = Convert.ToInt32(dr["Customer_Id"]),
                         Username = dr["Username"].ToString(),
-                        Password = dr["Password"].ToString()
+                        Password = dr["Password"].ToString(),
+                        Cid = Convert.ToInt32(dr["Cid"])
                     };
                     if (tempUser != null)
                     {
@@ -64,7 +65,7 @@ namespace BallParkApplication
                     {
                         MessageBox.Show("Welcome " + cust.Username + "!!!");
                         Utility.Utility.Customer = cust;
-                        BookingPage page = new BookingPage();
+                        CustomerPage page = new CustomerPage();
                         page.Show();
                         this.Close();
                     }

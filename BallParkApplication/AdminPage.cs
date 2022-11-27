@@ -134,7 +134,8 @@ namespace BallParkApplication
                     TicketId = Convert.ToInt32(dr["Ticket_Id"]),
                     Price = Convert.ToInt32(dr["Price"]),
                     TicketNo = Convert.ToInt32(dr["Ticket_No"]),
-                    SeatId = Convert.ToInt32(dr["SeatId"])
+                    SeatId = Convert.ToInt32(dr["SeatId"]),
+                    CustomerId = Convert.ToInt32(dr["Cid"])
                 };
                 if (tempUser != null)
                 {

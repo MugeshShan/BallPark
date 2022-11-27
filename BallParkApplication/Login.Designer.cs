@@ -38,7 +38,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.button1.Location = new System.Drawing.Point(359, 321);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 36);
@@ -65,30 +65,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label3.Location = new System.Drawing.Point(200, 232);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 23);
+            this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 19;
             this.label3.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label2.Location = new System.Drawing.Point(200, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 23);
+            this.label2.Size = new System.Drawing.Size(93, 22);
             this.label2.TabIndex = 18;
             this.label2.Text = "UserName";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(289, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 45);
+            this.label1.Size = new System.Drawing.Size(185, 45);
             this.label1.TabIndex = 17;
             this.label1.Text = "Ball Park";
             // 

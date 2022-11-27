@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button1.Location = new System.Drawing.Point(101, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 36);
@@ -48,10 +48,10 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 9F);
-            this.button3.Location = new System.Drawing.Point(310, 77);
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.button3.Location = new System.Drawing.Point(300, 77);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 36);
+            this.button3.Size = new System.Drawing.Size(126, 36);
             this.button3.TabIndex = 2;
             this.button3.Text = "Payment";
             this.button3.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Arial", 9F);
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button4.Location = new System.Drawing.Point(539, 77);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(90, 36);

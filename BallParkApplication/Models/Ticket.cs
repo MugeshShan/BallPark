@@ -15,5 +15,9 @@ namespace BallParkApplication.Models
         public int Price { get; set; }
 
         public int SeatId { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public string Date { get; set; }
     }
 }

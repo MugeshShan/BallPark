@@ -59,6 +59,12 @@
     <Compile Include="BookingPage.Designer.cs">
       <DependentUpon>BookingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPage.Designer.cs">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Transaction.cs" />
+    <Compile Include="MyBookingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyBookingsPage.Designer.cs">
+      <DependentUpon>MyBookingsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +110,17 @@
     <EmbeddedResource Include="BookingPage.resx">
       <DependentUpon>BookingPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBookingsPage.resx">
+      <DependentUpon>MyBookingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>
