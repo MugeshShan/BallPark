@@ -52,7 +52,7 @@ namespace BallParkApplication
             Utility.Utility.Section = this.comboBox1.Text;
             Utility.Utility.No_of_Seats = Convert.ToInt32(this.textBox1.Text);
             Utility.Utility.Amount = price;
-            command = String.Format("Insert INTO [Payment] ([Amount], [Payment_Type], [Customer_Id], [Payment_Date]) VALUES ({0}, '{1}', {2}, '{3}')", price * Convert.ToInt32(this.textBox1.Text), "Card", Utility.Utility.Customer.Cid, DateTime.Now.ToString("MM/dd/yyyy"));
+            command = String.Format("Insert INTO [Payment] ([Amount], [Payment_Type], [Customer_Id], [Payment_Date]) VALUES ({0}, '{1}', {2}, '{3}')", price * Convert.ToInt32(this.textBox1.Text), "Card", Utility.Utility.Customer.Id, DateTime.Now.ToString("MM/dd/yyyy"));
             command2 = new OleDbCommand(command, oleDbConnection);
             command2.ExecuteNonQuery();
             PaymentPage page = new PaymentPage();

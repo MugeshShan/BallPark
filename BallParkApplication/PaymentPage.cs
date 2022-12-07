@@ -43,7 +43,7 @@ namespace BallParkApplication
             adapter.Fill(ds);
             var dt = ds.Tables[0];
             var id = dt.Rows[0]["Cid"];
-            command = String.Format("Insert INTO [Booking] ([Ticket_Id], [Customer_Id], [Booking_Date]) VALUES ({0}, {1}, '{2}')", id, Utility.Utility.Customer.Cid, DateTime.Now.ToString("MM/dd/yyyy"));
+            command = String.Format("Insert INTO [Booking] ([Ticket_Id], [Customer_Id], [Booking_Date]) VALUES ({0}, {1}, '{2}')", id, Utility.Utility.Customer.Id, DateTime.Now.ToString("MM/dd/yyyy"));
             command2 = new OleDbCommand(command, oleDbConnection);
             command2.ExecuteNonQuery();
 
@@ -56,7 +56,7 @@ namespace BallParkApplication
             adapter.Fill(ds);
              dt = ds.Tables[0];
              id = dt.Rows[0]["Booking_Id"];
-            command = String.Format("Insert INTO [CustomerBooking] ([Booking_Id], [Customer_Id]) VALUES ({0}, {1})", id, Utility.Utility.Customer.Cid, DateTime.Now.ToString("MM/dd/yyyy"));
+            command = String.Format("Insert INTO [CustomerBooking] ([Booking_Id], [Customer_Id]) VALUES ({0}, {1})", id, Utility.Utility.Customer.Id, DateTime.Now.ToString("MM/dd/yyyy"));
             command2 = new OleDbCommand(command, oleDbConnection);
             command2.ExecuteNonQuery();
             MessageBox.Show("Tickets Booked!!!");
