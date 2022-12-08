@@ -11,7 +11,10 @@ namespace BallParkApplication.Utility
     {
         public static Customer Customer = new Customer();
         public static string Section = "";
-        public static int Amount = 0;
+        public static double Amount = 0;
         public static int No_of_Seats = 0;
+        public static Match Match = new Match();
+        public static double FinalPrice = 0.0;
+        public static List<Match> Matches = new List<Match>();
     }
 }

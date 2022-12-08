@@ -145,5 +145,11 @@ namespace BallParkApplication
             this.dataGridView1.DataSource = payments;
             oleDbConnection.Close();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AddMatchPage addMatchPage = new AddMatchPage();
+            addMatchPage.Show();
+        }
     }
 }

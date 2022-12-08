@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMatchPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMatchPage.Designer.cs">
+      <DependentUpon>AddMatchPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +83,16 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatchPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchPage.Designer.cs">
+      <DependentUpon>MatchPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
+    <Compile Include="Models\Match.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Transaction.cs" />
@@ -104,6 +117,9 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="AddMatchPage.resx">
+      <DependentUpon>AddMatchPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchPage.resx">
+      <DependentUpon>MatchPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyBookingsPage.resx">
       <DependentUpon>MyBookingsPage.cs</DependentUpon>

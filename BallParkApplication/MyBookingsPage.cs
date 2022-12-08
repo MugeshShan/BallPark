@@ -46,7 +46,7 @@ namespace BallParkApplication
                     CustomerId = Convert.ToInt32(dr["Cid"])
                 };
 
-                if (ticket.CustomerId == Utility.Utility.Customer.Cid)
+                if (ticket.CustomerId == Utility.Utility.Customer.Id)
                 {
                     tickets.Add(ticket);
                 }

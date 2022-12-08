@@ -64,6 +64,7 @@ namespace BallParkApplication
                     if (textBox1.Text == cust.Username && maskedTextBox1.Text == cust.Password)
                     {
                         MessageBox.Show("Welcome " + cust.Username + "!!!");
+                        oleDbConnection.Close();
                         Utility.Utility.Customer = cust;
                         CustomerPage page = new CustomerPage();
                         page.Show();

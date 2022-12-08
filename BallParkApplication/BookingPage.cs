@@ -46,15 +46,24 @@ namespace BallParkApplication
                 price = 1000;
             }
             var dateTime = DateTime.Now.ToString("MM/dd/yyyy");
-            var command = String.Format("Insert INTO [Ticket] ([Ticket_No], [Price], [SeatId], [Ticket_Date]) VALUES ({0}, {1}, {2}, '{3}')", textBox1.Text, price * Convert.ToInt32(this.textBox1.Text), seatId, dateTime);
+            var ticketPrice = 0.0;
+            if(Convert.ToInt32(this.textBox1.Text) >= 10)
+            {
+                var temp = price * Convert.ToInt32(this.textBox1.Text);
+                ticketPrice = temp - ((temp * 20) / 100);
+                Utility.Utility.FinalPrice = ticketPrice;
+            }
+            else
+            {
+                ticketPrice = price * Convert.ToInt32(this.textBox1.Text);
+                Utility.Utility.FinalPrice = ticketPrice;
+            }
+            var command = String.Format("Insert INTO [Ticket] ([Ticket_No], [Price], [SeatId], [Ticket_Date], [Cid]) VALUES ({0}, {1}, {2}, '{3}')", textBox1.Text, ticketPrice, seatId, dateTime, Utility.Utility.Customer.Id);
             OleDbCommand command2 = new OleDbCommand(command, oleDbConnection);
             command2.ExecuteNonQuery();
             Utility.Utility.Section = this.comboBox1.Text;
             Utility.Utility.No_of_Seats = Convert.ToInt32(this.textBox1.Text);
-            Utility.Utility.Amount = price;
-            command = String.Format("Insert INTO [Payment] ([Amount], [Payment_Type], [Customer_Id], [Payment_Date]) VALUES ({0}, '{1}', {2}, '{3}')", price * Convert.ToInt32(this.textBox1.Text), "Card", Utility.Utility.Customer.Id, DateTime.Now.ToString("MM/dd/yyyy"));
-            command2 = new OleDbCommand(command, oleDbConnection);
-            command2.ExecuteNonQuery();
+            Utility.Utility.Amount = ticketPrice;
             PaymentPage page = new PaymentPage();
             page.Show();
             oleDbConnection.Close();
