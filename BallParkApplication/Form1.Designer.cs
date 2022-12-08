@@ -59,11 +59,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(68, 95);
+            this.label1.Location = new System.Drawing.Point(25, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(661, 45);
+            this.label1.Size = new System.Drawing.Size(763, 45);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Welcome to Ball Park Ticket Booking";
+            this.label1.Text = "Welcome to Clevland Gauderians Ball Park";
             // 
             // Form1
             // 
